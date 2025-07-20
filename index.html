@@ -533,14 +533,14 @@
             progressContainer.addEventListener('click', seekToPosition);
             toggleAdvancedBtn.addEventListener('click', toggleAdvancedControls);
             
-            // Fonctions
-            function initPresetChannels() {
+           // Fonctions
+                function initPresetChannels() {
                 // Exemple de chaînes - à remplacer par vos propres flux
                 const channels = [
-                    { name: "Cyberpunk Radio", url: "https://example.com/cyberpunk.m3u8" },
-                    { name: "Neon News", url: "https://example.com/news.m3u8" },
-                    { name: "Synthwave FM", url: "https://example.com/synthwave.m3u8" },
-                    { name: "Tech Stream", url: "https://example.com/tech.m3u8" }
+                    { name: "I24 News", url: "https://bcovlive-a.akamaihd.net/ecf224f43f3b43e69471a7b626481af0/eu-central-1/5377161796001/profile_2/chunklist.m3u8" },
+                    { name: "Antenne Reunion", url: "https://live-antenne-reunion.zeop.tv/live/c3eds/antreunihd/hls_fta/antreunihd.m3u8" },
+                    { name: "Générations Tv", url: "https://edge11.vedge.infomaniak.com/livecast/ik:generation-tv/manifest.m3u8" },
+                    { name: "Afrobeats", url: "https://stream.ecable.tv/afrobeats/index.m3u8" }
                 ];
                 
                 channels.forEach(channel => {
