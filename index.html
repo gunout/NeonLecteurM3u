@@ -417,13 +417,12 @@
     </style>
 </head>
 <body>
-    <h1>// M3U PLAYER</h1>
+    <h1 class="pink-glow">// M3U PLAYER</h1>
     
     <div id="cyber-container">
-        <div class="scanlines"></div>
         <div id="main-container">
             <!-- Panel de contrôle -->
-            <div id="control-panel" class="cyber-border">
+            <div id="control-panel">
                 <div class="info-panel">
                     <div class="info-label">FLUX M3U/M3U8</div>
                     <input type="text" id="m3u-url" class="cyber-input" placeholder="URL du flux .m3u/.m3u8">
@@ -447,7 +446,7 @@
             </div>
             
             <!-- Lecteur vidéo -->
-            <div id="video-container" class="cyber-border">
+            <div id="video-container">
                 <video id="video-player" autoplay playsinline></video>
                 <div class="video-label" id="video-info">Aucun flux sélectionné</div>
                 <button id="fullscreen-btn" class="fullscreen-btn">⛶ PLEIN ÉCRAN</button>
@@ -484,7 +483,6 @@
     </div>
 
     <script>
-        // Le code JavaScript reste exactement le même que dans votre version originale
         document.addEventListener('DOMContentLoaded', () => {
             // Éléments DOM
             const videoPlayer = document.getElementById('video-player');
@@ -539,10 +537,10 @@
             function initPresetChannels() {
                 // Exemple de chaînes - à remplacer par vos propres flux
                 const channels = [
-                    { name: "I24 News", url: "https://bcovlive-a.akamaihd.net/ecf224f43f3b43e69471a7b626481af0/eu-central-1/5377161796001/profile_2/chunklist.m3u8" },
-                    { name: "Antenne Reunion", url: "https://live-antenne-reunion.zeop.tv/live/c3eds/antreunihd/hls_fta/antreunihd.m3u8" },
-                    { name: "Générations Tv", url: "https://edge11.vedge.infomaniak.com/livecast/ik:generation-tv/manifest.m3u8" },
-                    { name: "Afrobeats", url: "https://stream.ecable.tv/afrobeats/index.m3u8" }
+                    { name: "Cyberpunk Radio", url: "https://example.com/cyberpunk.m3u8" },
+                    { name: "Neon News", url: "https://example.com/news.m3u8" },
+                    { name: "Synthwave FM", url: "https://example.com/synthwave.m3u8" },
+                    { name: "Tech Stream", url: "https://example.com/tech.m3u8" }
                 ];
                 
                 channels.forEach(channel => {
@@ -764,7 +762,7 @@
             function updateProgress() {
                 if (videoPlayer.duration) {
                     const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-                    progressBar.style.width = `${percent}%';
+                    progressBar.style.width = `${percent}%`;
                     
                     const currentTime = formatTime(videoPlayer.currentTime);
                     const duration = formatTime(videoPlayer.duration);
